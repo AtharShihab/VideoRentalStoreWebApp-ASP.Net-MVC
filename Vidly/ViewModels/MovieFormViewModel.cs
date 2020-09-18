@@ -6,10 +6,10 @@ using Vidly.Models;
 
 namespace Vidly.ViewModels
 {
-    public class CustomerFormViewModel
+    public class MovieFormViewModel
     {
         public string Title { get; set; }
-        public IEnumerable<MembershipType> MembershipTypes { get; set; }
-        public Customer Customer { get; set; }
+        public List<Genre> Genres { get; set; }
+        public Movie Movie { get; set; }
     }
 }

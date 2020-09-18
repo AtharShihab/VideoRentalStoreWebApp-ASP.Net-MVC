@@ -27,8 +27,9 @@ namespace Vidly.Controllers
         {
             var membershipTypes = _context.MembershipTypes.ToList();
 
-            var viewModel = new CustomerFormViewModel() 
-            { 
+            var viewModel = new CustomerFormViewModel()
+            {
+                Title = "New Customer",
                 MembershipTypes = membershipTypes 
             };
 
@@ -68,6 +69,7 @@ namespace Vidly.Controllers
 
             var viewModel = new CustomerFormViewModel
             {
+                Title = "Edit Customer",
                 Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
@@ -82,7 +84,7 @@ namespace Vidly.Controllers
             return View(customers);
         }
 
-        public ActionResult Details(int id)
+        /*public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
             if(customer == null)
@@ -90,7 +92,7 @@ namespace Vidly.Controllers
                 return HttpNotFound();
             }
             return View(customer);
-        }
+        }*/
 
         
     }

@@ -23,6 +23,7 @@ namespace Vidly.Models
         public MembershipType MembershipType { get; set; }
 
         [DisplayName("Membership Type")]
+        [Required]
         public byte MembershipTypeId { get; set; }
     }
 }
