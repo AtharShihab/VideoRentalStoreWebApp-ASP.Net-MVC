@@ -8,8 +8,18 @@ namespace Vidly.ViewModels
 {
     public class MovieFormViewModel
     {
-        public string Title { get; set; }
         public List<Genre> Genres { get; set; }
         public Movie Movie { get; set; }
+        public string Title 
+        {
+            get
+            {
+                if (Movie != null && Movie.Id != 0)
+                    return "Edit Movie";
+
+                return "New Movie";
+            }
+             
+        }
     }
 }
