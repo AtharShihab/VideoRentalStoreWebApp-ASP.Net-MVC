@@ -31,6 +31,7 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
+        [Route("Movies/NewMovie")]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
@@ -42,6 +43,7 @@ namespace Vidly.Controllers
 
             return View("MovieForm", viewModel);
         }
+
 
         public ActionResult Edit(int id)
         {
